@@ -3,7 +3,7 @@
     "env": {
         "node": true,
         "vue/setup-compiler-macros":true,
-        "lint": true
+        "jest": true
     },
     "extends": [
         "plugin:vue/vue3-essential",

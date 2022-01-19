@@ -8,9 +8,7 @@ export default {
     who: {
       type: String,
       default: 'world',
-    }
+    },
   },
-  setup() {
-  }
 }
 </script>

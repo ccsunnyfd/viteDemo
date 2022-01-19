@@ -47,8 +47,14 @@ const todoState: TodoState = reactive({
   editingTodo: void 0, // current editing todo item
 })
 
-const { todos, addTodo, checkDone, updateTitle, removeTodo, allDone } =
-  useTodos(todoState)
+const {
+  todos,
+  addTodo,
+  checkDone,
+  updateTitle,
+  removeTodo,
+  allDone,
+} = useTodos(todoState)
 
 const filterState = useFilter(todos)
 
