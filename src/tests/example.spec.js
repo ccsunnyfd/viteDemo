@@ -8,6 +8,6 @@ describe('aaa', () => {
         who: 'Peter',
       },
     })
-    expect(wrapper.text()).toMatch('Peter')
+    expect(wrapper.text()).toMatch('Peter1')
   })
 })
