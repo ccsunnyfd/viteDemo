@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue'
+import { computed, onMounted, watchEffect } from 'vue'
 import Heading from 'comps/Heading'
 import { useFullscreen } from '@vueuse/core'
 import { onBeforeRouteLeave, useRouter, useRoute } from 'vue-router'
@@ -39,6 +39,16 @@ watchEffect(() => {
 function backToDashboard() {
   router.push('/')
 }
+
+onMounted(() => {
+  fetch('/api/users')
+    .then(response => response.json())
+    .then(json => console.log(json))
+  fetch('/api/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+  console.log(import.meta.env.VITE_TOKEN)
+})
 
 onBeforeRouteLeave(() => {
   const answer = window.confirm('你确定要离开当前页面吗？')
